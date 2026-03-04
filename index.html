@@ -1,38 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politique de Confidentialité — Badg'Heure</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7; color: #1F2937; background: #F9FAFB;
-            padding: 24px; max-width: 800px; margin: 0 auto;
+            line-height: 1.7;
+            color: #1F2937;
+            background: #F9FAFB;
+            padding: 24px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        h1 { font-size: 28px; color: #2563EB; margin-bottom: 8px; }
-        h2 { font-size: 20px; color: #111827; margin-top: 32px; margin-bottom: 12px; }
-        p, li { font-size: 15px; margin-bottom: 12px; }
-        ul { padding-left: 24px; }
-        .date { font-size: 13px; color: #6B7280; margin-bottom: 24px; }
-        .contact { background: #EFF6FF; border-radius: 8px; padding: 16px; margin-top: 24px; }
-        a { color: #2563EB; }
+
+        h1 {
+            font-size: 28px;
+            color: #2563EB;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #111827;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p,
+        li {
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        .date {
+            font-size: 13px;
+            color: #6B7280;
+            margin-bottom: 24px;
+        }
+
+        .contact {
+            background: #EFF6FF;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 24px;
+        }
+
+        a {
+            color: #2563EB;
+        }
     </style>
 </head>
+
 <body>
     <h1>Politique de Confidentialité</h1>
-    <p class="date">Dernière mise à jour : 18 février 2026</p>
+    <p class="date">Dernière mise à jour : 4 mars 2026</p>
 
-    <p>Badg'Heure est une application de suivi du temps de travail développée par hopiif. Cette politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos informations.</p>
+    <p>Badg'Heure est une application de suivi du temps de travail développée par hopiif. Cette politique de
+        confidentialité décrit comment nous collectons, utilisons et protégeons vos informations.</p>
 
     <h2>1. Données collectées</h2>
     <p>Badg'Heure collecte les données suivantes :</p>
     <ul>
-        <li><strong>Données de badgeage :</strong> heures d'arrivée, de départ, de pause. Ces données sont stockées localement sur votre appareil.</li>
-        <li><strong>Informations de compte Google :</strong> si vous choisissez de vous connecter avec Google, nous accédons à votre nom, adresse e-mail et photo de profil pour l'authentification.</li>
-        <li><strong>Données de synchronisation :</strong> si vous activez la synchronisation cloud, vos données de badgeage sont stockées de manière sécurisée sur Firebase (Google Cloud).</li>
-        <li><strong>Achats intégrés :</strong> les informations relatives à vos achats sont gérées par Google Play et ne sont pas stockées par nous.</li>
+        <li><strong>Données de badgeage :</strong> heures d'arrivée, de départ, de pause. Ces données sont stockées
+            localement sur votre appareil.</li>
+        <li><strong>Informations de compte Google :</strong> si vous choisissez de vous connecter avec Google, nous
+            accédons à votre nom, adresse e-mail et photo de profil pour l'authentification.</li>
+        <li><strong>Données de synchronisation :</strong> si vous activez la synchronisation cloud, vos données de
+            badgeage sont stockées de manière sécurisée sur Firebase (Google Cloud).</li>
+        <li><strong>Achats intégrés :</strong> les informations relatives à vos achats sont gérées par Google Play. Nous
+            stockons uniquement le statut d'activation de vos fonctionnalités premium (validé côté serveur via Firebase
+            Cloud Functions).</li>
     </ul>
 
     <h2>2. Utilisation des données</h2>
@@ -41,44 +91,62 @@
         <li>Afficher vos heures de travail, rapports et statistiques.</li>
         <li>Synchroniser vos données entre vos appareils (si activé).</li>
         <li>Générer des exports CSV de vos badgeages.</li>
+        <li>Valider vos achats intégrés côté serveur pour garantir leur authenticité.</li>
     </ul>
     <p>Nous ne vendons, ne partageons et ne transmettons aucune donnée personnelle à des tiers.</p>
 
     <h2>3. Stockage et sécurité</h2>
     <ul>
-        <li><strong>Stockage local :</strong> par défaut, toutes les données restent sur votre appareil via AsyncStorage.</li>
-        <li><strong>Stockage cloud :</strong> si la synchronisation est activée, vos données sont chiffrées et stockées sur Firebase Firestore, protégées par les règles de sécurité Firebase.</li>
+        <li><strong>Stockage local :</strong> par défaut, toutes les données restent sur votre appareil via
+            AsyncStorage.</li>
+        <li><strong>Stockage cloud :</strong> si la synchronisation est activée, vos données sont stockées sur Firebase
+            Firestore, protégées par des règles de sécurité qui isolent vos données (seul vous pouvez y accéder).</li>
+        <li><strong>Traitement serveur :</strong> les achats intégrés sont validés côté serveur via Firebase Cloud
+            Functions. Aucune donnée personnelle n'est transmise lors de cette validation, seuls le jeton d'achat et
+            l'identifiant du produit sont vérifiés.</li>
+        <li><strong>Obfuscation :</strong> le code de l'application est compilé en bytecode et obfusqué pour protéger la
+            propriété intellectuelle.</li>
     </ul>
 
     <h2>4. Services tiers</h2>
     <p>L'application utilise les services tiers suivants :</p>
     <ul>
-        <li><strong>Firebase Authentication :</strong> pour la connexion Google — <a href="https://firebase.google.com/support/privacy">Politique Firebase</a></li>
-        <li><strong>Firebase Firestore :</strong> pour la synchronisation cloud — <a href="https://cloud.google.com/terms">Conditions Google Cloud</a></li>
-        <li><strong>Google Play Billing :</strong> pour les achats intégrés — <a href="https://policies.google.com/privacy">Politique Google</a></li>
+        <li><strong>Firebase Authentication :</strong> pour la connexion Google — <a
+                href="https://firebase.google.com/support/privacy">Politique Firebase</a></li>
+        <li><strong>Firebase Firestore :</strong> pour la synchronisation cloud — <a
+                href="https://cloud.google.com/terms">Conditions Google Cloud</a></li>
+        <li><strong>Firebase Cloud Functions :</strong> pour la validation des achats côté serveur — <a
+                href="https://cloud.google.com/terms">Conditions Google Cloud</a></li>
+        <li><strong>Google Play Billing :</strong> pour les achats intégrés — <a
+                href="https://policies.google.com/privacy">Politique Google</a></li>
     </ul>
 
-    <h2>5. Droits des utilisateurs</h2>
-    <p>Vous pouvez à tout moment :</p>
+    <h2>5. Droits des utilisateurs (RGPD)</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous pouvez à tout moment :</p>
     <ul>
+        <li><strong>Accéder à vos données</strong> via l'historique et les rapports de l'application.</li>
+        <li><strong>Exporter vos données</strong> au format CSV depuis les paramètres.</li>
         <li><strong>Supprimer vos données locales</strong> en désinstallant l'application.</li>
         <li><strong>Supprimer vos données cloud</strong> en vous déconnectant de votre compte dans les paramètres.</li>
-        <li><strong>Demander la suppression</strong> de toutes vos données en nous contactant.</li>
+        <li><strong>Demander la suppression totale</strong> de toutes vos données en nous contactant par e-mail.</li>
     </ul>
 
     <h2>6. Publicité</h2>
     <p>Badg'Heure ne contient <strong>aucune publicité</strong> et n'utilise aucun SDK publicitaire.</p>
 
     <h2>7. Mineurs</h2>
-    <p>L'application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données personnelles d'enfants.</p>
+    <p>L'application n'est pas destinée aux enfants de moins de 13 ans. Nous ne collectons pas sciemment de données
+        personnelles d'enfants.</p>
 
     <h2>8. Modifications</h2>
-    <p>Nous nous réservons le droit de modifier cette politique. Toute modification sera publiée sur cette page avec une date de mise à jour.</p>
+    <p>Nous nous réservons le droit de modifier cette politique. Toute modification sera publiée sur cette page avec une
+        date de mise à jour.</p>
 
     <div class="contact">
         <h2 style="margin-top: 0;">9. Contact</h2>
         <p>Pour toute question relative à la confidentialité :</p>
-        <p>📧 <a href="mailto:maelmrvn@gmail.com">maelmrvn@gmail.com</a></p>
+        <p>📧 <a href="mailto:support.navrom@gmail.com">support.navrom@gmail.com</a></p>
     </div>
 </body>
+
 </html>
